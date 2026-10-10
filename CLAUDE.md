@@ -42,3 +42,10 @@ npm run preview  # ビルド結果の確認
 ```
 
 - テストは未導入。プッシュ前は最低限 `npm run build` が通ることを確認する。
+
+## デプロイ(GitHub Pages)
+
+- `main` へのプッシュで `.github/workflows/deploy.yml` が動き、ビルド結果(`dist/`)が GitHub Pages に自動デプロイされる。
+- 公開 URL: https://mabc-nidaira.github.io/task-board/
+- `vite.config.js` の `base` はリポジトリ名(`/task-board/`)に合わせている。リポジトリ名を変えたら `base` も変更する。
+- `main` へのプッシュは、そのまま一般公開につながる。社外秘情報や個人情報が含まれていないか、プッシュ前に必ず確認する。
